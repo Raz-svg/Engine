@@ -1,4 +1,4 @@
-#include "image.hpp"
+#include "rendering/image.hpp"
 #include <fstream>
 #include <cstring>
 #include <cmath>

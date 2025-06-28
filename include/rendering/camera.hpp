@@ -1,7 +1,7 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "ray.hpp"
+#include "math/ray.hpp"
 
 class Camera{
 

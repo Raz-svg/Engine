@@ -1,4 +1,4 @@
-#include "camera.hpp"
+#include "rendering/camera.hpp"
 
 Camera::Camera() {
     position = point3(0.0, 0.0, 0.0);

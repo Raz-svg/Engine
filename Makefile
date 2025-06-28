@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
 LDFLAGS = -lSDL2 -lm
 
-SRCDIR = .
+SRCDIR = src
 INCDIR = include
 OBJDIR = obj
 OUTDIR = output
