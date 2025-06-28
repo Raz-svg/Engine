@@ -20,10 +20,7 @@ bool APP::oninit(){
         1200,720,
         SDL_WINDOW_RESIZABLE|SDL_WINDOW_SHOWN);
     if(pwindow != nullptr){
-        prenderer =SDL_CreateRenderer(pwinode,-1,0);
-
-
-
+        prenderer =SDL_CreateRenderer(pwindow,-1,0);
 
 
     }

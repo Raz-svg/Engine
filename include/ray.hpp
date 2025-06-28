@@ -2,6 +2,8 @@
 #define RAY_H
 
 #include "vec3.h"
+
+
 class Ray{
     private:
     point3 orig;
