@@ -3,7 +3,7 @@
 
 #include<string>
 #include<vector>
-#include<SDL2/SDL.H>
+#include<SDL2/SDL.h>
 
 class Image{
 
@@ -35,3 +35,5 @@ class Image{
 		SDL_Renderer *m_pRenderer;
 		SDL_Texture *m_pTexture;
 };
+
+#endif

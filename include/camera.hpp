@@ -7,11 +7,7 @@ class Camera{
 
     public:
 
-        Camera()const{
-
-            vec3& position=vec3(0.0,0.0,0.0),
-
-        };
+        Camera();
 
         void moveforward(double delta);
         void movebackward(double delta);
@@ -24,8 +20,11 @@ class Camera{
         vec3 position;  // Camera position
         vec3 target;    // Point the camera is looking at
         vec3 up;        // Up vector for orientation
-        vec3 direction; // Normalized direction (target - position)
+        Ray direction;  // Ray representing camera direction
         vec3 right;     // Right vector (cross product of direction and up)
+        vec3 horizontal; // Horizontal viewport vector
+        vec3 vertical;   // Vertical viewport vector
+        vec3 upper_left_corner; // Upper left corner of viewport
 
     public:
         double aspect_ratio=16.0/9.0;
