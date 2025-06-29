@@ -1,48 +1,92 @@
-# Build artifacts
-/output
-/obj
-*.o
-*.a
-*.so
-*.dylib
+# =============================================================================
+# C++ Raytracer Project - Git Ignore Rules
+# =============================================================================
 
-# Executables
-raytracer
-*.exe
+# BUILD ARTIFACTS - New Clean Structure
+# -------------------------------------
+# Ignore the entire build directory (contains debug/, release/, tests/)
+/build/
 
-# Development environment
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# LEGACY BUILD DIRECTORIES (for safety, in case they're recreated)
+# ----------------------------------------------------------------
+/output/
+/obj/
+/docs
+# COMPILED FILES
+# --------------
+*.o                 # Object files
+*.a                 # Static libraries
+*.so                # Shared libraries (Linux)
+*.dylib             # Dynamic libraries (macOS)
+*.dll               # Dynamic libraries (Windows)
+*.lib               # Import libraries (Windows)
 
-# OS specific
-.DS_Store
-Thumbs.db
-*.tmp
+# EXECUTABLES
+# -----------
+raytracer           # Main executable (any location)
+test_runner         # Test executable (any location)
+*.exe               # Windows executables
 
-# Logs and debug files
-*.log
-debug/
-*.dSYM/
+# DEVELOPMENT ENVIRONMENT
+# -----------------------
+.vscode/            # VS Code settings
+.idea/              # IntelliJ/CLion settings
+*.swp               # Vim swap files
+*.swo               # Vim swap files
+*~                  # Temporary files
 
-# CMake (if used in future)
+# OPERATING SYSTEM FILES
+# ----------------------
+.DS_Store           # macOS folder attributes
+Thumbs.db           # Windows thumbnail cache
+*.tmp               # Temporary files
+
+# DEBUG AND PROFILING
+# -------------------
+*.log               # Log files
+*.dSYM/             # Debug symbols (macOS)
+core                # Core dumps
+core.*              # Core dumps with PID
+vgcore.*            # Valgrind core dumps
+cachegrind.out.*    # Cachegrind profiling output
+callgrind.out.*     # Callgrind profiling output
+massif.out.*        # Massif profiling output
+
+# CMAKE (future-proofing)
+# -----------------------
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile.bak
+install_manifest.txt
 
-# Test outputs
-test_results/
-coverage/
+# TEST OUTPUTS
+# ------------
+test_results/       # Test result outputs
+coverage/           # Code coverage reports
+*.gcda              # Coverage data files
+*.gcno              # Coverage notes files
+*.gcov              # Coverage summary files
 
-# Temporary files
-*.bak
-*.orig
-*.rej
+# TEMPORARY AND BACKUP FILES
+# ---------------------------
+*.bak               # Backup files
+*.orig              # Original files (from merges)
+*.rej               # Rejected patches
+*~                  # Editor temporary files
+.#*                 # Emacs lock files
 
-# Runtime generated files
-core
-core.*
-vgcore.*
+# DOCUMENTATION BUILD OUTPUTS (keep source .typ files)
+# ----------------------------------------------------
+# Note: We keep the generated PDFs in docs/ for convenience,
+# but you might want to uncomment these if rebuilding docs frequently:
+# docs/*.pdf
+
+# RUNTIME GENERATED ASSETS
+# -------------------------
+# Uncomment if your raytracer generates output images:
+# *.png
+# *.jpg
+# *.bmp
+# renders/
+# output_images/
